@@ -32,7 +32,9 @@ Test coverage
 |-|-|
 |Login|valid login, locked-out user, invalid credentials (parametrized), logout|
 |Inventory|product count, price sorting (asc/desc), cart badge|
-|Checkout|full purchase flow, form validation|
+|Checkout|<br />full purchase flow, form validation|
+|cart |remove item from cart |
+|Product|open product details page|
 
 ## Run locally
 

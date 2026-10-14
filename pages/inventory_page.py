@@ -32,3 +32,6 @@ class InventoryPage(BasePage):
     def logout(self) -> None:
         self.menu_button.click()
         self.logout_link.click()
+
+    def open_product(self, name: str) -> None:
+        self.page.locator("[data-test='inventory-item-name']", has_text=name).click()

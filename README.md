@@ -51,6 +51,8 @@ pytest --headed --slowmo 500    # watch it run
 
 Report: `reports/report.html`. View a failure trace with
 `playwright show-trace test-results/<test>/trace.zip`.
+<img width="1920" height="871" alt="Screenshot 2026-10-20 154950" src="https://github.com/user-attachments/assets/d459e400-7ee3-4a34-9fbb-96780df20e60" />
+
 
 ## CI/CD pipeline
 

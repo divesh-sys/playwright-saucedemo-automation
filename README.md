@@ -25,7 +25,7 @@ tested against the public demo shop [saucedemo.com](https://www.saucedemo.com), 
 ```
 
 Test coverage
-12 test scenarios run on Chromium, Firefox and WebKit in CI, giving 36 test executions in the Allure report.
+12 test scenarios run on Chromium, Firefox and WebKit in CI, giving 42 test executions in the Allure report.
 ---
 
 |Area|Scenarios|

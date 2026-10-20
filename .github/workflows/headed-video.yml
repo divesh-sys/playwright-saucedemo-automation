@@ -1,0 +1,43 @@
+name: Headed run with video
+
+on:
+  workflow_dispatch:
+
+jobs:
+  headed-video:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Install Playwright browser
+        run: playwright install --with-deps chromium
+
+      - name: Install virtual display and ffmpeg
+        run: sudo apt-get update && sudo apt-get install -y xvfb ffmpeg
+
+      - name: Run tests in headed mode with video
+        run: xvfb-run -a pytest --browser chromium --headed --slowmo 500 --video on
+
+      - name: Convert videos to mp4
+        if: always()
+        run: |
+          mkdir -p videos
+          for f in $(find test-results -name "*.webm"); do
+            name=$(basename "$(dirname "$f")")
+            ffmpeg -y -i "$f" -c:v libx264 -pix_fmt yuv420p "videos/$name.mp4"
+          done
+
+      - name: Upload videos
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: test-videos
+          path: videos/

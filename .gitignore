@@ -4,3 +4,4 @@ __pycache__/
 reports/
 test-results/
 .ruff_cache/
+videos/

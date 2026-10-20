@@ -54,6 +54,9 @@ Report: `reports/report.html`. View a failure trace with
 
 ## CI/CD pipeline
 
+## demo video [video.webm](https://github.com/user-attachments/assets/21d75cc0-65f2-409a-ab51-3b5524907412)
+
+
 Defined in `.github/workflows/ci.yml`:
 
 1. **Lint** – Ruff static analysis

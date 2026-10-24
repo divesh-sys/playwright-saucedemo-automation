@@ -1,79 +1,63 @@
+<h1 align="center">Playwright Python Test Automation</h1>
+
 <p align="center">
-  <img src="assets/banner.svg" alt="Playwright Python Test Automation" width="100%">
+  End-to-end UI test automation framework for the <a href="https://www.saucedemo.com">SauceDemo</a> web shop,<br>
+  with cross-browser execution, CI/CD pipelines in GitHub Actions and Jenkins, and a live Allure report.
 </p>
 
 <p align="center">
   <a href="https://github.com/divesh-sys/playwright-saucedemo-automation/actions/workflows/ci.yml"><img src="https://github.com/divesh-sys/playwright-saucedemo-automation/actions/workflows/ci.yml/badge.svg" alt="CI/CD status"></a>
-  <img src="https://img.shields.io/badge/tests-14-brightgreen" alt="14 tests">
-  <img src="https://img.shields.io/badge/browsers-3-informational" alt="3 browsers">
+  <img src="https://img.shields.io/badge/Python-3.12-3776AB?logo=python&logoColor=white" alt="Python 3.12">
+  <img src="https://img.shields.io/badge/Playwright-UI%20testing-45ba4b?logo=playwright&logoColor=white" alt="Playwright">
+  <img src="https://img.shields.io/badge/pytest-8.x-0A9EDC?logo=pytest&logoColor=white" alt="pytest">
+  <img src="https://img.shields.io/badge/Allure-report-orange" alt="Allure report">
 </p>
 
 <p align="center">
-  <a href="https://divesh-sys.github.io/playwright-saucedemo-automation/"><b>📊 Live Allure Report</b></a> &nbsp;•&nbsp;
-  <a href="https://github.com/divesh-sys/playwright-saucedemo-automation/actions"><b>⚙️ CI/CD Runs</b></a> &nbsp;•&nbsp;
-  <a href="#-demo"><b>🎬 Demo Video</b></a> &nbsp;•&nbsp;
-  <a href="#-quick-start"><b>🚀 Quick Start</b></a>
-</p>
-
-<p align="center">
-  <img src="assets/stats.svg" alt="14 automated tests, 3 browsers, 42 test runs per build, 2 CI/CD tools" width="100%">
+  <a href="https://divesh-sys.github.io/playwright-saucedemo-automation/"><b>Live Allure report</b></a> ·
+  <a href="https://github.com/divesh-sys/playwright-saucedemo-automation/actions"><b>CI/CD runs</b></a> ·
+  <a href="#demo"><b>Demo video</b></a>
 </p>
 
 ---
 
-## 💡 About the project
+## About the project
 
-An end-to-end UI test automation framework for the public demo shop [saucedemo.com](https://www.saucedemo.com). It automates the main user journeys: **login, product browsing and sorting, cart management and checkout**.
+This project automates the main user journeys of a demo e-commerce site: logging in, browsing and sorting products, managing the cart and completing a purchase. It is built the way a real test automation framework is structured, with reusable page objects, shared fixtures, parametrized data, cross-browser runs and an automated pipeline that publishes the results.
 
-It is built the way a real automation framework is structured: reusable page objects, shared fixtures, parametrized data, cross-browser execution, and automated pipelines that run the tests and publish the results.
+## Highlights
 
-## ✨ Highlights
+- **Page Object Model** for maintainable, reusable test code
+- **Cross-browser testing** on Chromium, Firefox and WebKit
+- **14 automated tests** (42 executions across 3 browsers) with `smoke` and `regression` markers
+- **Parametrized tests** to cover several data sets with one test function
+- **Reporting:** Allure dashboard, pytest HTML report, screenshots and Playwright traces on failure
+- **CI/CD with GitHub Actions:** lint, parallel browser matrix, automatic report publishing to GitHub Pages
+- **Video recording** of headed runs through a manual workflow
+- **Two pipelines:** GitHub Actions (`ci.yml`) and Jenkins (declarative `Jenkinsfile`) run the same tests
 
-| | |
+## Tech stack
+
+| Purpose | Tool |
 |---|---|
-| 🧩 **Page Object Model** | One class per page keeps the tests short and easy to maintain |
-| 🌐 **Cross-browser** | Every test runs on Chromium, Firefox and WebKit |
-| 🏷️ **Test markers** | Run `smoke` or `regression` suites on demand |
-| 🔁 **Parametrized tests** | Several data sets covered by one test function |
-| 📸 **Rich failure data** | Screenshots, Playwright traces and Allure attachments on failure |
-| ⚙️ **Two CI/CD pipelines** | GitHub Actions (`ci.yml`) and Jenkins (`Jenkinsfile`) |
-| 📊 **Live reporting** | Allure dashboard published automatically to GitHub Pages |
-| 🎥 **Video recording** | Headed runs recorded through a manual workflow |
+| Language | Python 3.12 |
+| Browser automation | Playwright |
+| Test runner | pytest, pytest-playwright |
+| Reporting | Allure, pytest-html |
+| Code quality | Ruff |
+| CI/CD | GitHub Actions, GitHub Pages, Jenkins |
 
-## 🧰 Tech stack
-
-<p>
-  <img src="https://img.shields.io/badge/Python-3.12-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python">
-  <img src="https://img.shields.io/badge/Playwright-2EAD33?style=for-the-badge&logo=playwright&logoColor=white" alt="Playwright">
-  <img src="https://img.shields.io/badge/pytest-0A9EDC?style=for-the-badge&logo=pytest&logoColor=white" alt="pytest">
-  <img src="https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=githubactions&logoColor=white" alt="GitHub Actions">
-  <img src="https://img.shields.io/badge/Jenkins-D24939?style=for-the-badge&logo=jenkins&logoColor=white" alt="Jenkins">
-  <img src="https://img.shields.io/badge/Allure-Report-FF6F61?style=for-the-badge" alt="Allure">
-  <img src="https://img.shields.io/badge/Ruff-linter-D7FF64?style=for-the-badge&logo=ruff&logoColor=black" alt="Ruff">
-</p>
-
-## 🎬 Demo
+## Demo
 
 https://github.com/user-attachments/assets/21d75cc0-65f2-409a-ab51-3b5524907412
 
-### 📊 Allure report
+### Allure report
 
-<p align="center">
-  <img width="900" alt="Allure report dashboard" src="https://github.com/user-attachments/assets/d459e400-7ee3-4a34-9fbb-96780df20e60" />
-</p>
+<img width="1920" height="871" alt="Allure report dashboard" src="https://github.com/user-attachments/assets/d459e400-7ee3-4a34-9fbb-96780df20e60" />
 
-## 🔄 CI/CD pipelines
+## CI/CD pipeline (GitHub Actions)
 
-<p align="center">
-  <img src="assets/pipeline.svg" alt="Pipeline flow: push, GitHub, lint, test, report, result" width="100%">
-</p>
-
-Both pipelines run the same stages on every push: **lint, test on 3 browsers, report**.
-
-<details>
-<summary><b>⚙️ GitHub Actions pipeline</b> (<code>.github/workflows/ci.yml</code>)</summary>
-
-<br>
+The pipeline is defined in [`.github/workflows/ci.yml`](.github/workflows/ci.yml). It runs on every push and pull request to `main`, every weekday morning, and on demand.
 
 ```mermaid
 flowchart LR
@@ -95,15 +79,11 @@ flowchart LR
 | Artifacts | HTML reports are always saved, traces and screenshots are saved on failure |
 | Report | Results from all browsers are merged into one Allure report and published to GitHub Pages |
 
-Triggers: push and pull request to `main`, every weekday morning, and manual start.
-A second workflow, `headed-video.yml`, runs the tests in headed mode on a virtual display and records a video of every test.
+A second workflow, `headed-video.yml`, runs the tests in headed mode on a virtual display and records a video of every test. It is started manually from the Actions tab.
 
-</details>
+## Jenkins pipeline
 
-<details>
-<summary><b>🛠️ Jenkins pipeline</b> (<code>Jenkinsfile</code>)</summary>
-
-<br>
+The repository also contains a [`Jenkinsfile`](Jenkinsfile), so the same tests can run on a Jenkins server. Jenkins checks GitHub for new commits, runs the stages below, and records the results.
 
 ```mermaid
 flowchart TD
@@ -127,28 +107,45 @@ flowchart TD
 | Test | pytest runs 14 tests on 3 browsers (42 executions) and writes `reports/junit.xml` |
 | Report | Test results, the HTML report, traces and screenshots are archived with the build |
 
-**Run it yourself**
+### Run it yourself
 
-1. Install Java 17 or later and download `jenkins.war` from [jenkins.io](https://www.jenkins.io/download/).
+1. Install Java 17 or 21 and download `jenkins.war` from [jenkins.io](https://www.jenkins.io/download/).
 2. Start Jenkins and open `http://localhost:8080`:
    ```bash
    java -jar jenkins.war --httpPort=8080
    ```
-3. Create a **Pipeline** job: Definition **Pipeline script from SCM**, SCM **Git**, this repository URL, branch `*/main`, Script Path `Jenkinsfile`.
+3. Create a **Pipeline** job with these settings:
+   - Definition: **Pipeline script from SCM**
+   - SCM: **Git**, repository URL of this project, branch `*/main`
+   - Script Path: `Jenkinsfile`
 4. In the `Jenkinsfile`, change the `PYTHON` value to the path of Python 3.12 on your machine, then click **Build Now**.
 
-</details>
+GitHub Actions and Jenkins run the same project, so the tests can be executed with either tool.
 
-## ✅ Test coverage
+## Test coverage
 
 | Area | Scenarios |
 |---|---|
-| 🔐 Login | valid login, locked-out user, invalid credentials (3 parametrized cases), logout |
-| 🛍️ Inventory | product count, price sorting low to high and high to low, cart badge updates |
-| 🛒 Cart | remove an item from the cart, open a product details page |
-| 💳 Checkout | full end-to-end purchase, required field validation |
+| Login | valid login, locked-out user, invalid credentials (3 parametrized cases), logout |
+| Inventory | product count, price sorting low to high and high to low, cart badge updates |
+| Cart | remove an item from the cart, open a product details page |
+| Checkout | full end-to-end purchase, required field validation |
 
-## 🚀 Quick start
+## Project structure
+
+```
+playwright-saucedemo-automation/
+├── pages/                  # Page objects (login, inventory, cart, checkout)
+├── tests/                  # Test suites and shared fixtures (conftest.py)
+├── .github/workflows/
+│   ├── ci.yml              # Lint, cross-browser tests, Allure report to GitHub Pages
+│   └── headed-video.yml    # Manual headed run with video recording
+├── Jenkinsfile             # Jenkins pipeline (declarative)
+├── pytest.ini              # Configuration, markers, report options
+└── requirements.txt
+```
+
+## Run it locally
 
 **Requirements:** Python 3.12 and Git.
 
@@ -165,15 +162,9 @@ python -m venv .venv
 # 3. Install dependencies and browsers
 pip install -r requirements.txt
 playwright install
-
-# 4. Run the tests
-pytest
 ```
 
-<details>
-<summary><b>🧪 Useful commands</b></summary>
-
-<br>
+### Useful commands
 
 | Goal | Command |
 |---|---|
@@ -185,43 +176,14 @@ pytest
 | Record videos | `pytest --video on` |
 | Save traces for every test | `pytest --tracing on` |
 
-</details>
-
-<details>
-<summary><b>📑 Reports</b></summary>
-
-<br>
+### Reports
 
 - **pytest HTML report:** open `reports/report.html`
 - **Playwright trace viewer:** `playwright show-trace test-results/<test-folder>/trace.zip`
-- **Allure dashboard:** `allure serve allure-results` (requires the Allure command-line tool)
+- **Allure dashboard:** run `allure serve allure-results` (requires the Allure command-line tool)
 
-</details>
-
-<details>
-<summary><b>📁 Project structure</b></summary>
-
-<br>
-
-```
-playwright-saucedemo-automation/
-├── assets/                 # README graphics
-├── pages/                  # Page objects (login, inventory, cart, checkout)
-├── tests/                  # Test suites and shared fixtures (conftest.py)
-├── .github/workflows/
-│   ├── ci.yml              # Lint, cross-browser tests, Allure report to GitHub Pages
-│   └── headed-video.yml    # Manual headed run with video recording
-├── Jenkinsfile             # Jenkins pipeline (declarative)
-├── pytest.ini              # Configuration, markers, report options
-└── requirements.txt
-```
-
-</details>
-
-## 👤 Author
+## Author
 
 **Divesh Jadhav** · [GitHub: divesh-sys](https://github.com/divesh-sys)
 
-<p align="center">
-  If you find this project useful, a ⭐ on the repo is appreciated.
-</p>
+If you find this project useful, a star on the repo is appreciated.

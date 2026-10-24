@@ -1,4 +1,3 @@
-<img width="1920" height="965" alt="Screenshot 2026-10-24 235949" src="https://github.com/user-attachments/assets/c9ac62f2-4b79-443f-a25c-fe9c12a3933f" />
 <h1 align="center">Python + Playwright + pytest end-to-end tests for an e-commerce site: 42 automated runs on Chromium, Firefox and WebKit, with CI/CD in GitHub Actions and Jenkins and a live Allure report</h1>
 
 <p align="center">
@@ -72,7 +71,7 @@ flowchart LR
     D3 --> E
     E --> F[GitHub Pages]
 ```
-
+<img width="1920" height="965" alt="Screenshot 2026-10-24 235949" src="https://github.com/user-attachments/assets/c9ac62f2-4b79-443f-a25c-fe9c12a3933f" />
 | Stage | What happens |
 |---|---|
 | Lint | Ruff checks code style, and the pipeline stops if it fails |

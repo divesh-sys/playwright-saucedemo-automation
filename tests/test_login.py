@@ -8,7 +8,7 @@ from tests.conftest import VALID_PASSWORD, VALID_USER
 def test_valid_login(page, login_page):
     login_page.login(VALID_USER, VALID_PASSWORD)
     expect(page).to_have_url("https://www.saucedemo.com/inventory.html")
-    expect(page.locator("[data-test='title']")).to_have_text("Products")
+    expect(page.locator("[data-test='title']")).to_have_text("Productz")
 
 
 @pytest.mark.regression

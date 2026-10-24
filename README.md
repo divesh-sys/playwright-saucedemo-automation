@@ -1,4 +1,4 @@
-<h1 align="center">Playwright Python Test Automation</h1>
+<h1 align="center">Python + Playwright + pytest end-to-end tests for an e-commerce site: 42 automated runs on Chromium, Firefox and WebKit, with CI/CD in GitHub Actions and Jenkins and a live Allure report</h1>
 
 <p align="center">
   End-to-end UI test automation framework for the <a href="https://www.saucedemo.com">SauceDemo</a> web shop,<br>

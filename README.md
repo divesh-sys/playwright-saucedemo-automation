@@ -113,6 +113,7 @@ flowchart TD
    ```bash
    java -jar jenkins.war --httpPort=8080
    ```
+   <img width="1920" height="965" alt="Screenshot 2026-10-24 235949" src="https://github.com/user-attachments/assets/c9ac62f2-4b79-443f-a25c-fe9c12a3933f" />
 3. Create a **Pipeline** job with these settings:
    - Definition: **Pipeline script from SCM**
    - SCM: **Git**, repository URL of this project, branch `*/main`

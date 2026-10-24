@@ -32,6 +32,12 @@ pipeline {
             }
         }
 
+        stage('Hello') {
+            steps {
+                bat 'echo Hello from Jenkins, build number %BUILD_NUMBER%'
+            }
+        }
+
         stage('Test') {
             steps {
                 bat '.venv\\Scripts\\pytest --browser chromium --browser firefox --browser webkit --junitxml=reports/junit.xml'
